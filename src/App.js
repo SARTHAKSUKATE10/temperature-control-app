@@ -6,6 +6,8 @@ const App = () => {
   const [color, setColor] = useState("cold")
 
   const increaseTemp = () =>{
+if(temperatureValue===40) return;
+
     const newTemp = temperatureValue+1
   
     if(newTemp>=22){
@@ -16,6 +18,8 @@ const App = () => {
   }
   
   const decreaseTemp = () =>{
+if(temperatureValue===-4)return
+
     const newTemp = temperatureValue-1
 
     if(newTemp<22){
